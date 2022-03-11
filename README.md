@@ -8,6 +8,7 @@
 * [Dataset used](#data)
 * [Tools used](#tools)
 * [Acknowledgment](#ack)
+* [Medium Post](#medium)
 
 
 #### General Information
@@ -41,3 +42,7 @@ The geo-coordinate provided in the extraction process was the geo-coordinate of 
 <a name="ack"/>
 A special thanks to Udacity and Misk Academy for giving me the opportunity to learn, explore and use some data science-related skills.
 Also, the appreciation goes to twitter for making tweets retrieving possible.
+
+#### Medium Post
+<a name="medium"/>
+https://medium.com/@rawanalmakinah/the-hottest-topics-that-were-discussed-among-people-on-twitter-during-the-covid-19-pandemic-538762fd764e
