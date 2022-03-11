@@ -1,4 +1,4 @@
-### DSND_Project2_Disaster_Response_Pipeline
+### DSND_Capstone_Project
 
 #### +----------> This Project is dedicated to the Data Scientist Nano Degree | Udacity <----------+
 
@@ -7,104 +7,37 @@
 * [Files available](#files)
 * [Dataset used](#data)
 * [Tools used](#tools)
-* [Useful information](#info)
-* [Program Execution Process](#exe)
 * [Acknowledgment](#ack)
 
 
 #### General Information
 <a name="general"/> 
-
-In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
-The Machine Learning Pipeline went through a tuning process using GridSearchCV.
-The final result is a web app that takes messages as input, analyzes them using the tuned ML Pipeline, and categorizes the message according to 36 available categories.
-This web app is helpful for organizations that work in a disaster/response field. It will facilitate categorizing the received messages and direct the message to the category-related organization.
-
+This project is dedicated to organizations seeking to analyze texts available for service improvements and customer satisfaction.
+Tweets were retrieved during the covid-19 pandemic to be analyzed and extract important information to help higher education organizations and institutes spot the issues and provide instant actions. The tweets were cleaned, analyzed, and used to train a machine learning model. 
 
 #### Files available
 <a name="files"/>
 
-* A message Dataset (messages.csv | From Figure 8 company) : 26248 Records x 4 Columns
-* A categories Dataset (categories.csv | From Figure 8 company) : 26248 Records x 2 Columns
-* A Python file for data processing (process_data.py)
-* A resulting database that contains the cleaned table (Disaster_Response.db) with a Disaster_Response table.
-* A python file that has the Machine Learning Pipeline (train_classifier.py).
-* A pickle file that has the tuned ML Pipeline (classifier.pkl).
-* A python file for rendering the web app pages (run.py).
-* Two HTML files for formatting the web app pages (go.html | master.html).
+* A tweets Dataset (COVID-19Students_Tweets.csv) : 4424 records, 13 columns
+* A Python file for data processing, model training, and data visualization. (- COVID-19 Tweets Analysis.py)
 * ReadMe file
-
-app
-
-| - template
-
-| |- master.html # main page of web app
-
-| |- go.html # classification result page of web app
-
-|- run.py # Flask file that runs app
-
-data
-
-|- disaster_categories.csv # data to process
-
-|- disaster_messages.csv # data to process
-
-|- process_data.py
-
-|- Disaster_Response.db # database to save clean data to
-
-models
-
-|- train_classifier.py
-
-|- classifier.pkl # saved model
-
-README.md
-
 
 #### Dataset used
 <a name="data"/>
-messages & categories | The datasets were provided by Figure 8 company.
+4424 tweets | retrieved from twitter targeted the (COVID-19) and (Student) hashtags over the period of December 1st, 2019 till April 14th, 2020. 
+The geo-coordinate provided in the extraction process was the geo-coordinate of the center of Richmond city, VA, and the radius distance extended to 500 km.
 
 #### Libraries and Tools used
 <a name="tools"/>
-1. <b>Jupyter Nootebook</b>
+<b>Jupyter Nootebook</b>
 
-* Python Version: 3.6.5
-* Pandas Version: 0.23.0
-* NLP Library: NLTK
-* ML Libraries: NumPy, SciPy, Pandas, Sciki-Learn
-* SQLlite Database Library: SQLalchemy
-* Data Visualization: Flask, Plotly
-
-2. <b>Udacity IDE</b>
-
-
-#### Useful information: 
-<a name="info"/>
-+ <b>Web App Link</b> :  https://view6914b2f4-3001.udacity-student-workspaces.com/
-
-
-#### Program Execution Process :
-<a name="exe"/>
-To create the database, train, and save the model, follow these instructions: 
-
-1. To run ETL pipeline for data cleaning and saving: 
-
-  `python process_data.py disaster_messages.csv disaster_categories.csv Disaster_Response.db`
- 
-2. To run the ML pipeline for data loading for the Database, training the model (classifier), and exporting the classifier as a pickle file: 
-
-  `python train_classifier.py ../data/Disaster_Response.db classifier.pkl`
-
-3. in order to run the web app, you must run the (run.py) file. 
-    
-    Then visit this link : (https://view6914b2f4-3001.udacity-student-workspaces.com/).
-
+* **Python Version**: 3.6.5
+* **Pandas Version**: 0.23.0
+* **NLP Library**: NLTK
+* **Other Libraries**: math, NumPy, SciPy, Pandas, Sciki-Learn, matplotlib, wordcloud.
+* **Data Visualization**: Plotly
 
 #### Acknowledgment
 <a name="ack"/>
 A special thanks to Udacity and Misk Academy for giving me the opportunity to learn, explore and use some data science-related skills.
-Also, the appreciation goes to Figure 8 company for offering the dataset.
-Thanks to our mentor Mr. Haroon.
+Also, the appreciation goes to twitter for making tweets retrieving possible.
